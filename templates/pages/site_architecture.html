@@ -1,0 +1,15 @@
+{% extends "base.html" %}
+{% load static i18n %}
+
+{% block content %}
+<div class="inner-width-1">
+    <div class="text-center pb-4" >
+        <h3 class="c-title"><strong>Site Architecture</strong></h3>
+        <hr>
+    </div>
+    <div class="containers text-center home-body-img">
+            <img class="c-img-responsive" style="background-size:contain;" src="{% static 'images/personal_site_diagram.svg' %}">
+    </div>
+</div>
+
+{% endblock content %}

@@ -1,0 +1,28 @@
+{% extends "base.html" %}
+{% load static %}
+
+
+{% block appcontent %}
+
+
+<div id="vue-training">
+        {% include 'training/navbar.html' %}
+<header>
+    <div class="training-header" style="position: relative;">
+        <img class="img-fluid c-banner" alt="Responsive image" src="{% static 'images/training-header4.jpg' %}">
+        <div class="training-header-title">
+            <h1 id="training-title">[% title %]</h1>
+            <p>Welcome, {{ request.user.first_name }} {{ request.user.last_name }}</p>
+        </div>
+    </div>
+</header>
+
+<div class="col-12 row">
+{% include 'training/required_list.html' %}
+{% include 'training/past_due_list.html' %}
+</div>
+</div>
+
+
+
+{% endblock appcontent %}

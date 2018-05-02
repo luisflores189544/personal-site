@@ -1,0 +1,342 @@
+
+.header::after, .c-nav-item::after {
+    width: 100%;
+    content: "";
+}
+
+.header {
+    box-shadow: 0 0 1px rgba(0,0,0,0.25);
+    transition: background-color 0.3s ease-in-out;
+    background-color: #fff;
+    top: 0px;
+    width: 100%;
+    height: 80px;
+    padding: 10px 60px;
+    position: fixed;
+}
+
+/* #navbar-menu {
+    background-color: rgba(53, 52, 52, 0.808);
+
+
+} */
+
+.c-paragraph {
+    margin-bottom: 60px;
+}
+
+
+a {
+    color: aliceblue;
+}
+
+#nav {
+    line-height: 40px;
+}
+
+.c-nav-link {
+    padding-bottom: 3px;
+    color: black;
+}
+
+
+.c-nav-item {
+    position: relative;
+    margin-left: 27px;
+    /* padding-bottom: 10px;
+    margin-bottom: 0;     */
+
+}
+
+.c-nav-item::after {
+    height: 5px;
+
+    background-color: rgba(15, 15, 15, 0.808);
+    background-color: rgb(107, 153, 46);
+    position: absolute;
+    bottom: 0;
+    left: 0;
+    opacity: 0;
+    transition: opacity,.1s ease-in-out;
+    
+
+}
+
+.c-nav-item:hover::after, .active:after {
+    opacity: 1;
+    
+    /* background-color: rgb(82, 122, 29); */
+    transition: opacity,.1s ease-in-out;
+}
+
+/* .c-nav-link:hover, .active {
+
+    border-bottom: 3px solid rgb(111, 163, 43);
+    background-color: rgb(82, 122, 29); 
+    transition: opacity,.1s ease-in-out;
+} */
+
+.c-nav-link {
+    -webkit-tap-highlight-color: rgba(112, 104, 104, 0)
+}
+
+.c-title {
+    color: rgb(107, 153, 46);
+}
+
+body {
+    background-color: rgb(243, 245, 245);
+    font-family: 'IBM Plex Mono', monospace;
+}
+
+.inner-width-1 {
+    max-width: 700px;
+    margin: 0 auto;
+}
+
+@media screen and (max-width: 768px) {
+    #navbar-menu {
+        background-color: white;
+        padding-top: 0px;
+        padding-bottom: 0px;
+        padding-left: 0px;
+    }
+    .header {
+        height: 50px;
+    }
+    .home-body-img {
+        margin-bottom: 100px;
+    }
+    .training-header-title {
+        width: 100%;
+        margin-top: -10px;
+        position: relative;
+    }
+
+    
+}
+
+
+.home-body-img {
+    padding: 10px 10px 10px 10px;
+    border-top: 1px solid #e7e7e7;
+    border-bottom: 1px solid #e7e7e7;
+    background-color: #fff;
+    position: none;
+}
+/* .row {
+    height: 100px;
+} */
+
+.home-body-img a {
+    margin-top: 15px;
+    margin-left:15px;
+    margin-bottom: 15px;
+}
+
+.home-body-img a img {
+    width: 145px;
+    padding-left: 25px;
+    padding-right: 25px;
+    padding-top:15px;
+}
+
+.c-img-responsive {
+    max-width: 100%;
+    max-height: 100%;
+}
+
+#bottom-bar {
+    background-color: rgb(173, 177, 190);
+    font-size: 14px;
+
+}
+
+.bottom-bar {
+    margin-top: 80px;
+}
+
+/* Part of the login module */
+.loginParentContainer{
+    display:table; 
+    height:100%; 
+    margin: 0 auto;
+}
+
+.loginSubParentContainer{
+    /* display:table-cell;  */
+    vertical-align:middle;
+    margin-top: 30%;
+}
+#loginForm{
+    width: 250px;
+}
+
+input {
+    width: 100%;
+}
+
+.c-banner {
+    width: 100%;
+    /* max-height: 400px; */
+    overflow: hidden;
+}
+
+.training-header-title {
+    /* position: absolute; */
+    top: 25%;
+    /* bottom: 520px; */
+    /* right: 20px; */
+    background-color: rgba(0, 0, 0, 0.541);
+    color: white;
+    padding: 40px 40px 40px 80px;
+    position: absolute;
+    
+}
+
+.training-header {
+    padding-bottom: 30px;
+}
+
+#training-navbar {
+    color: black;
+}
+
+#training-navbar ul li a {
+    padding-left: 50px;
+    color: black;
+}
+
+#training-navbar ul li a:hover {
+    color:rgb(224, 132, 25);
+}
+
+.training-home-table {
+    padding: 20px 20px 20px 20px;
+}
+.training-home-table table {
+    font-size: 14px;
+}
+
+
+
+#training-required-table tbody tr td a {
+    display: block;
+    color: black;
+    text-decoration: none;
+}
+
+.training-answer-btn {
+    width: 50px;
+    height: 50px;
+    font-size: 24px;
+}
+
+.training-start-btn {
+    border-radius: 50%;
+    font-size: 22px;
+    padding: 34px;
+    margin: 4px 2px;
+    display: inline-block;
+}
+
+
+
+.training-question-frame {
+    margin-left: 20px;
+    margin-right: 20px
+}
+
+@media screen and (min-width:481px) {
+    #training-nav-home-icon {
+        display: none;
+    }
+}
+
+@media screen and (max-width: 480px) {
+    .training-answer-btn {
+        width: 100%;
+        height: 100px;
+        text-align: center;
+
+    }
+
+    #training-questions .form-group label {
+        display: none;
+    }
+    #training-nav-home {
+        display: none;
+    }
+    #training-nav-home-icon {
+        display: block;
+        font-size: 26px;
+    }
+    #training-navbar {
+        margin-top: -50px;
+        margin-bottom: -35px;
+    }
+
+    .training-header-title {
+        width: 100%;
+        margin-top: -10px;
+        position: static;
+        padding: 5px 5px 5px 5px;    
+        text-align: left;
+        
+    }
+    .training-header-title h1 {
+        font-size: 24px;
+    }
+    /* #training-title {
+        top: 50%;
+        left: 50%;
+
+    } */
+    #navbar-menu {
+        background-color: white;
+        padding-top: 0px;
+        padding-bottom: 0px;
+        padding-left: 0px;
+    }
+    .c-banner {
+        display: none;
+    }
+
+    .training-home-table {
+        padding: 0px 0px 0px 0px;
+    }
+
+    #c-about-pic {
+        width: 90%;
+    }
+}
+
+@media screen and (max-width: 1024px) and (min-width: 481px) {
+    .training-header-title {
+        padding: 40px 40px 10px 80px;       
+        margin-top: -35px;
+    }   
+}
+
+.bottom-links .list {
+    display: flex;
+}
+
+.bottom-links .list .items{
+    padding-left: 10px;
+    padding-right: 10px;
+    list-style: none;
+    
+}
+
+.bottom-links .list .items a{
+    color:black;
+    text-decoration: none;
+    text-decoration-color: none;
+    
+}
+
+.bottom-links .list .items a:hover{
+    color:rgb(107, 153, 46);
+    
+}

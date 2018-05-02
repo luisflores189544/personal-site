@@ -1,0 +1,73 @@
+{% extends "base.html" %}
+{% load static i18n %}
+
+
+{% block content %}
+
+<div class="inner-width-1">
+    <div class="pb-4">
+        <h3 class="c-title"><strong>About Luis</strong></h3>
+        <hr>
+    </div>
+    <div>
+        <img src="{% static 'images/self_picture.jpg'%}" class="float-right m-4" width="290" height="320" id="c-about-pic">
+    </div>
+    <div class="c-paragraph">
+    
+        <p class="c-paragraphs">
+            I’m a self-taught programmer and I have been programming 
+            in Python since 2013.  
+        </p>
+        <p>
+            I started learning SQL/T-SQL in 2011 prior to discovering Python.
+        </p>
+        <p>
+            I became interested in SQL after observing a C# developer 
+            at a previous job writing a SQL query.  I thought SQL was 
+            so cool at that point in time.
+        </p>
+        <p>
+            I went home that day and starting Googling the crap out of 
+            MS SQL.
+        </p>
+        <p>
+            After a few days of some intense studying, I asked him if I could help 
+            work an invertory report that was a deliverable.
+        </p>
+        <p>
+            Since that day I have been working with or as part of 
+            an IT department.  I have a strong desire to expand my technical skills, specifically
+            my Python knowledge.
+        </p>
+        <p>
+            After learning SQL/Python, I began working with desktop frameworks, including Qt. 
+            I also created a script to do some webscrapting.  My skills have evolved into 
+            integrating processes and applications via API's and scripting ETL processes.
+        </p>
+        <p class="c-paragraphs">
+            My focus now is Web development.  In the last 3 years I began 
+            learning JavaScript, CSS3, HTML5; the fundamentals of Web development. The 
+            frameworks that I have began to learn are Django, Flask, Ruby on Rails, JQuery and Vue.js.
+        </p>
+        
+    </div>
+
+    <div class="pb-4">
+        <h3 class="c-title"><strong>Luis 2018 Goals</strong></h3>
+        
+    </div>
+    <div class="c-paragraph">
+        <p>
+            My technical goals for 2018 includes:
+        </p>
+        <ul>
+            <li>Become proficient in Vue.js.</li>
+            <li>Expand my knowledge in Cloud Architecture, Microservices and Docker Container.</li>
+            <li>Learn a new language. (Golang, better known as Go, is the one in mind.)</li>
+        </ul>
+    </div>
+    
+</div>
+
+
+{% endblock content %}

@@ -1,0 +1,41 @@
+
+<nav class="navbar navbar-toggleable-smmm navbar-expand-md  navbar-darkk" id="navbar-menu">
+    <div class="container">    
+            <button type="button" class="navbar-toggler navbar-toggler-right" data-toggle="collapse" data-target="#myNavbar" aria-expanded="false">
+
+                <span class="oi oi-menu"></span>
+            </button>
+            
+        <div class="collapse navbar-collapse" id="myNavbar">
+            <ul class="navbar-nav" id="nav">
+                <li v-bind:class="{active:navbar_links.home, 'c-nav-item':true}">
+                    <a v-on:click="setNavBarToActive('home')" class="nav-link c-nav-link" href="/">
+                         Home
+                    </a>
+
+                </li>
+                <li v-bind:class="{active:navbar_links.projects, 'nav-item':true, 'dropdown':true, 'c-nav-item':true}">
+                    <a class="nav-link pr-2 dropdown-toggle c-nav-link" href="" id="navbardrop" data-toggle="dropdown">
+                        Apps
+                    </a>
+                    <div class="dropdown-menu">
+                        <a v-on:click="setNavBarToActive('projects')" class="dropdown-item" href="{% url 'login:login' %}">Training System</a>
+                    </div>
+                </li>
+                <li class="c-nav-item">
+                    <a class="nav-link c-nav-link" href="{% url 'architecture' %}">
+                            Site Architecture
+                    </a>
+                </li>
+                <li v-bind:class="{active:navbar_links.about_me, 'c-nav-item':true}">
+                    <a v-on:click="setNavBarToActive('about_me')" class="nav-link c-nav-link" href="{% url 'about' %}">
+                            About Me
+                    </a>
+                </li>
+    
+            </ul>
+
+        </div>
+    </div>
+</nav>
+

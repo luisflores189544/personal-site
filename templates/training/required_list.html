@@ -1,0 +1,24 @@
+{% load training_tags %}
+<div class="container-fluid col-lg-6 col-sm-12">
+    <div class=" training-home-table" >
+        <div >
+            <h4>[% session_required_title %]</h4>
+        </div>
+        <table class="table table-hover" id="training-required-table">
+            <thead class="thead-dark">
+                <th>Title</th>
+                <th>Due</th>
+            </thead>
+            {% get_required_training request.user.id as trainings %}  
+            <tbody>
+                <tr v-for="training in {{ trainings }}">    
+                    <td><a v-bind:href="training.id">[% training.title %]</a></td>
+                    <td><a v-bind:href="training.id">[% training.due_date %]</a></td>
+                </tr>
+            </tbody>  
+        </table>
+
+        
+
+    </div>
+</div>

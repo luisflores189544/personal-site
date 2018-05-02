@@ -1,0 +1,26 @@
+{% extends "base.html" %}
+{% load static %}
+
+
+{% block appcontent %}
+
+{% include 'training/navbar.html' %}
+
+<div class="container">
+    <div class="pt-3 text-center">
+        <h3>You have completed training session.  View below for test results</h3>
+    </div>
+    <br>
+    <div class=" text-center pt-5 pb-5" >
+        {% if is_pass_fail == 'PASS' %}
+            <img class="img-responsives" src="{% static 'images/pass-icon-1.svg' %}">
+        {% else %}
+            
+                <img class="img-responsives" src="{% static 'images/fail-icons-1.svg' %}">
+            
+        {% endif %}
+    </div>
+
+</div>
+
+{% endblock appcontent %}

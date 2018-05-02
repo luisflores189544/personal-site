@@ -1,0 +1,78 @@
+{% load static i18n %}<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <meta charset="utf-8">
+        <meta http-equiv="x-ua-compatible" content="ie=edge">
+        <title>{% block title %}Luis Flores Website{% endblock title %}</title>
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <meta name="description" content="My personal web site">
+        <meta name="author" content="Luis Flores">
+
+        <!-- HTML5 shim, for IE6-8 support of HTML5 elements -->
+        <!--[if lt IE 9]>
+        <script src="https://cdnjs.cloudflare.com/ajax/libs/html5shiv/3.7.3/html5shiv.min.js"></script>
+        <![endif]-->
+
+        <!-- Font file -->
+        <link href="https://fonts.googleapis.com/css?family=IBM+Plex+Mono" rel="stylesheet">
+        <!-- Latest compiled and minified Bootstrap 4 beta CSS -->
+        <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/css/bootstrap.min.css" integrity="sha384-Gn5384xqQ1aoWXA+058RXPxPg6fy4IWvTNh0E263XmFcJlSAwiGgFAW/dAiS6JXm" crossorigin="anonymous">
+        
+        <!-- Project specific CSS files -->
+        <link href="{% static 'css/project.css' %}" rel="stylesheet">
+        <link href="{% static 'others/open-iconic-master/font/css/open-iconic-bootstrap.css' %}" rel="stylesheet">
+        <!-- <script src="https://unpkg.com/vue"></script>
+        <script src="https://unpkg.com/vue-router/dist/vue-router.js"></script> -->
+        {% block css %}{% endblock %}
+        
+    </head>
+    <div class="header">
+        {% block banner %}{% endblock banner %}
+
+        <div id="vue-navbar">
+            {% include 'navbar.html' %}
+        </div>
+    </div>
+
+    <body>  
+        
+       
+        {% if "apps" in request.get_full_path %}
+        <div class="" style="margin-top:80px;">
+            {% block appcontent %}{% endblock appcontent %}
+        </div>
+        {% else %}
+        <div class="container" style="margin-top:125px;">
+            {% block content %}{% endblock content %}
+        </div>
+        {% endif %}
+
+        <!-- Footer -->
+
+
+        <div class="bottom-bar">
+            {% include 'bottom_bar.html' %}
+        </div>
+
+        
+        <!-- Required by Bootstrap v4 beta -->
+        <script src="https://code.jquery.com/jquery-3.2.1.slim.min.js" integrity="sha384-KJ3o2DKtIkvYIK3UENzmM7KCkRr/rE9/Qpg6aAZGJwFDMVNA/GpGFF93hXpG5KkN" crossorigin="anonymous"></script>
+        <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.12.9/umd/popper.min.js" integrity="sha384-ApNbgh9B+Y1QKtv3Rn7W3mgPxhU9K/ScQsAP7hUibX39j7fakFPskvXusvfa0b4Q" crossorigin="anonymous"></script>
+        <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/js/bootstrap.min.js" integrity="sha384-JZR6Spejh4U02d8jOt6vLEHfe/JQGiRRSQQxSfFWpi1MquVdAyjUar5+76PVCmYl" crossorigin="anonymous"></script>
+        
+        
+        
+        
+
+        <!-- Your stuff: Third-party javascript libraries go here -->
+        
+
+        <!-- place project specific Javascript in this file -->
+        <script src="{% static 'js/vue.js' %}"></script>
+        <script src="{% static 'js/vue-router.js' %}"></script>
+        <script src="{% static 'js/project.js' %}"></script>
+        <script src="{% static 'js/v_base.js' %}"></script>
+          
+        {% block javascript %}{% endblock javascript %}
+    </body>
+</html>

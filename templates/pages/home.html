@@ -1,0 +1,105 @@
+{% extends "base.html" %}
+{% load static i18n %}
+
+{% block banner %}
+
+{% endblock banner %}
+
+{% block content %}
+
+
+<div class="inner-width-1">
+    <p class="c-paragraphs">
+        <strong style="font-size: 24px;">Hello</strong> 
+        fellow viewers, and welcome to my site.  
+    </p>
+    <p>
+        I build this site with one main purpose, to 
+        show my viewers, what can be done with the technology stack
+        that I used and how I did it.
+    </p>
+    <p>
+        As I start adding more and more apps, I will put together some 
+        tutorials, to walk through the process step by step and 
+        provide some details over the chocies I made.
+    </p>
+    <p>
+        All source code can be found on my <a href="https://github.com/luisflores189544" class="c-title"><strong>Github</strong></a> 
+        account.
+    </p>
+    <div class="text-left pb-4 pt-4">
+        <h3 class="c-title"><strong>Technology Stack</strong></h3>
+        <hr>
+    </div>
+    <div class="container home-body-img">
+        <div class="row">
+            <a href="https://getbootstrap.com/" target="_">
+                <img class="img-responsive" src="{% static 'images/bootstrap4_1_icon.png' %}">
+            </a>
+            <a href="https://www.javascript.com/" target="_">
+                <img class="img-responsive" src="{% static 'images/javascript_1_icon.png' %}">
+            </a>
+            <a href="https://www.postgresql.org/" target="_">
+                <img class="img-responsive " src="{% static 'images/postgresql_1_icon.png' %}">
+            </a>
+            <a href="https://vuejs.org/" target="_">
+                <img class="img-responsive " src="{% static 'images/vuejs3_icon.png' %}">
+            </a>
+            <a href="https://www.mongodb.com/" target="_">
+                <img class="img-responsive align-middle" src="{% static 'images/mongodb_1_icon.png' %}">
+            </a>
+            <a href="https://git-scm.com/" target="_">
+                <img class="img-responsive " src="{% static 'images/git_1_icon.png' %}">
+            </a>
+            <a href="https://www.djangoproject.com/" target="_">
+                <img class="img-responsive " src="{% static 'images/django2_icon.png' %}">
+            </a>
+            <a href="https://github.com/" target="_">
+                <img class="img-responsive " src="{% static 'images/github_1_icon.svg' %}">
+            </a>
+            <a href="https://www.python.org/" target="_">
+                <img class="img-responsive " src="{% static 'images/python_icon.jpeg' %}">
+            </a>
+            <a href="https://aws.amazon.com/ec2/" target="_">
+                <img class="img-responsive " src="{% static 'images/amazon_ec2_2_icon.png' %}">
+            </a>
+            <a href="https://aws.amazon.com/lightsail/?nc2=h_m1" target="_">
+                <img class="img-responsive " src="{% static 'images/amazon_lightsail_1_icon.png' %}">
+            </a>
+            <a href="https://aws.amazon.com/route53/?nc2=h_m1" target="_">
+                <img class="img-responsive " src="{% static 'images/amazon_route_53_2_icon.png' %}">
+            </a>
+        </div>
+    </div>
+    <div class="text-left pb-4 pt-4">
+        <h3 class="c-title"><strong>Training System App</strong></h3>
+        <hr>
+    </div>
+    <!-- Training System App -->
+    <div>
+        <p>
+            <strong>Summary:</strong> Application allows admins user to create new training session
+            and assign questions with multiple choices.  Upon completion, trainee
+            will receive overall score with pass or fail message.
+        </p>
+        <p>
+            <strong>Instructions:</strong> From the navbar under Apps dropdown, select 
+            <a href="{% url 'login:login' %}" class="c-title"><strong>Training Session</strong></a> 
+            and you will be prompt to enter Username and Password.  Credentials 
+            provided below.  You will be directed to the home app page.  You may 
+            select any training session from the "Training Required" or "Training Past Due" 
+            tables to begin session.
+        </p>
+        <div>
+            <h5 class="text-left c-title"><strong>Credentials</strong></h5>
+            <ul>
+                <li>Username: <strong class="c-title">jhomes</strong></li>
+                <li>Password: <strong class="c-title">password123</strong></li>
+            </ul>
+        </div>
+    </div>
+</div>
+
+
+
+{% endblock content %}

@@ -1,0 +1,39 @@
+{% extends "base.html" %}
+{% load static i18n %}
+{% load training_tags %}
+
+{% block appcontent %}
+{% include 'training/navbar.html' %}
+
+<div class="container-fluid col-lg-12 col-sm-12" id="vue-training">
+    <div class=" training-home-table">
+        <div >
+            <h4>Completed List</h4>
+        </div>
+        <div class="table-responsive">
+            <table class="table table-hover" id="training-required-table">
+                <thead class="thead-dark">
+                    <th>Title</th>
+                    <th>Status</th>
+                    <th>Completed Date</th>
+                    <th>Session Status</th>
+                    <th>Score</th>
+                </thead>
+                {% get_completed_training request.user.id as assignments %}  
+                <tbody>
+                    <tr v-for="assignment in {{ assignments }}">    
+                        <td>[% assignment.title %]</td>
+                        <td>[% assignment.status %]</td>
+                        <td>[% assignment.completed_date %]</td>
+                        <td>[% assignment.session_status %]</td>
+                        <td>[% assignment.score %]</td>
+                    </tr>
+                </tbody>  
+            </table>
+        </div>
+        
+
+    </div>
+</div>
+
+{% endblock appcontent %}    

@@ -1,0 +1,28 @@
+<div class="container training-navbar-container text-center" >
+    <!-- <hr> -->
+    <nav class="navbar navbar-expand" id="training-navbar">
+        <ul class="navbar-nav">
+            <li class="nav-item">
+                <a href="{% url 'training:home' %}">
+                    <span id="training-nav-home">Home</span>
+                    <span class="oi oi-home" id="training-nav-home-icon"></span>
+                </a>
+            </li>
+            <li class="nav-item">
+                <a href="{% url 'training:completed' %}">
+                    <span id="training-nav-home">Completed List</span>
+                    <span class="oi oi-list" id="training-nav-home-icon"></span>
+                </a>
+            </li>
+        </ul>
+        <ul class="navbar-nav ml-auto">
+            <li class="nav-item">
+                <a class="nav-link pl-2 pr-2" href="{% url 'login:logout' %}">
+                    <span class="oi oi-account-logout" id="training-nav-home-icon"></span> 
+                    <span id="training-nav-home">Logout {{ request.user.username }}</span>
+                </a>
+            </li>
+        </ul>
+    </nav>
+    <hr>
+</div>
