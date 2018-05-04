@@ -319,7 +319,9 @@ input {
 }
 
 .bottom-links .list {
-    display: flex;
+    display:inline-block; 
+    margin:0;
+    -webkit-padding-start:0;
 }
 
 .bottom-links .list .items{
