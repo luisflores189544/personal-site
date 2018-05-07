@@ -16,9 +16,20 @@
             <img class="img-responsives" src="{% static 'images/pass-icon-1.svg' %}">
         {% else %}
             
-                <img class="img-responsives" src="{% static 'images/fail-icons-1.svg' %}">
+            <img class="img-responsives" src="{% static 'images/fail-icons-1.svg' %}">
             
         {% endif %}
+    </div>
+    <div class="text-center">
+        <h5>
+            Your score: <strong>{{ score }}</strong>
+        </h5>
+    </div>
+    <div class="pt-5 text-center">
+        <p>
+            <a href="{% url 'training:home' %}" style="color:red;">Click here </a>
+            to return back to Training home page.
+        </p>
     </div>
 
 </div>
