@@ -46,35 +46,80 @@ new Vue({
 new Vue({
     el:'#vue-training-session',
     data: {
-        selected_choice:''
+        selected_choice: 0,
+        width_size: 0
     },
     delimiters: ["[%", "%]"],
+    mounted() {
+        this.$nextTick(function() {
+            window.addEventListener('resize', this.getWindowWidth);
+
+            this.getWindowWidth()
+
+            
+        })
+    },
     methods: {
         anwserSelected: function (id) {
-            choice_id = id;
-            this.selected_choice = choice_id;
+            if (this.selected_choice !== 0) {
+                this.resetChoiceBtnBG(this.selected_choice)
+            }
+            this.selected_choice = id;
 
-            this.clearSelected();
+            if (this.width_size > 480) {
+                this.clearSelected();
+
+                let btn_id = document.getElementById(id);
+                btn_id.innerText = 'X'
+            };
+            this.changeChoiceBtnBG(this.selected_choice)
             this.enableSubmitBtn();
-
-            let btn_id = document.getElementById(id);
-            btn_id.innerText = 'X'
-
         },
 
         clearSelected: function () {
             let choice_btn = document.getElementsByClassName('training-answer-btn');
-            console.log(choice_btn)
+            console.log('clearSelected',choice_btn)
             let i;
             for (i = 0; i <choice_btn.length; i++) {
                 choice_btn[i].innerText = ''
             };
-            
         },
 
         enableSubmitBtn: function() {
             let btn = document.getElementById('training-submit-btn');
             btn.disabled = false;
+        },
+
+        getWindowWidth(event) {
+            this.width_size = document.documentElement.clientWidth;
+
+            console.log('getWindowWidth', this.width_size)
+            if (this.width_size <= 480) {
+                console.log('show execute addChoiceToBtn')
+                this.addChoiceToBtn()
+            } else {
+                this.clearSelected()
+            }
+        },
+
+        addChoiceToBtn: function() {
+            let choice_btn = document.getElementsByClassName('training-answer-btn');
+            let choice_text = document.getElementsByClassName('col-form-label');
+            let i;
+            for (i = 0; i <choice_btn.length; i++) {
+                choice_btn[i].innerText = choice_text[i].innerText
+            }
+
+        },
+
+        changeChoiceBtnBG: function(id) {
+            let btn_id = document.getElementById(id);
+            btn_id.setAttribute("style", "background-color:green;")
+        },
+
+        resetChoiceBtnBG: function(id) {
+            let btn_id = document.getElementById(id);
+            btn_id.setAttribute("style", "background-color:#007bff;")
         }
     }
     
