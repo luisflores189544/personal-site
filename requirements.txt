@@ -5,7 +5,7 @@ awesome-slugify==1.6.5
 Babel==2.5.3
 boto3==1.4.7
 botocore==1.7.48
-certifi==2018.1.18
+certifi==2022.12.7
 cffi==1.11.4
 chardet==3.0.4
 Collectfast==0.5.2
